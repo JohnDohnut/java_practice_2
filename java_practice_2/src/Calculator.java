@@ -9,8 +9,8 @@ public class Calculator{
     public char operator = ' ';
     public double number2 = 0;
     public double result = 0.0;
-    private Object IOException;
-
+    private final static char[] operators = char[] operators = {'+', '-', '*', '/', '%'};
+    
     public static void main(String[] args){
         // User Input
         // 1) BufferReader() & InputStreamReader()
@@ -21,13 +21,14 @@ public class Calculator{
         Calc.input_BufferReader();
         Calc.Caculate();
     }
+    
     public void input_BufferReader()  {
 
         try{
 
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-            char[] operators = {'+', '-', '*', '/', '%'};
+           
             boolean is_valid_operator = false;
 
             String str_buffer = null;
@@ -69,6 +70,7 @@ public class Calculator{
         }
 
     }
+    
     public void input_DataInputStream(){
         try{
 
@@ -77,6 +79,7 @@ public class Calculator{
 
         }
     }
+
     public void input_Scanner(){
         try{
 
@@ -84,9 +87,11 @@ public class Calculator{
         catch(Exception e){
         }
     }
+    
     public void input_Console(){
 
     }
+    
     public void Caculate(){
         switch(operator){
             case '+':
@@ -107,11 +112,13 @@ public class Calculator{
         }
 
     }
+    
     public void initParameter(){
         number = 0;
         number2 = 0;
         operator = ' ';
     }
+    
 }
 
 
