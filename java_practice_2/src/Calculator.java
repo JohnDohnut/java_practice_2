@@ -26,19 +26,19 @@ public class Calculator{
 
         try{
 
-            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+            BufferedReader bufferedReader char[] operators = {'+', '-', '*', '/', '%'}; = new BufferedReader(new InputStreamReader(System.in));
 
            
             boolean is_valid_operator = false;
 
             String str_buffer = null;
             System.out.printf("Enter First Integer\n");
-            str_buffer = br.readLine();
+            str_buffer = bufferedReader.readLine();
             number = Double.parseDouble(str_buffer);
             
             str_buffer = null;
             System.out.printf("\nEnter Operator\n");
-            str_buffer = br.readLine();
+            str_buffer = bufferedReader.readLine();
             if(str_buffer.length() > 1){
                 throw new IOException("Enter single operator character\n");
             }
@@ -55,7 +55,7 @@ public class Calculator{
 
             str_buffer = null;
             System.out.printf("Enter Second Integer\n");
-            str_buffer = br.readLine();
+            str_buffer = bufferedReader.readLine();
             number2 = Double.parseDouble(str_buffer);
 
         }
